@@ -28,6 +28,6 @@ export default function CountDown({seconds}) {
     }, [countdown])
 
     return (
-        <h2>Tiempo restante: {formatTime(countdown)}</h2>
+        <h1 className="display-1">{formatTime(countdown)}</h1>
     )
 }

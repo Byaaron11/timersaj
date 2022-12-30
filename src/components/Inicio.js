@@ -1,20 +1,22 @@
-import React, { Component } from 'react'
-import CountDown from '../Countdown';
+import React, { Component, useEffect, useRef, useState } from "react";
+import '../style/Inicio.css';
+
+
 
 export default class Inicio extends Component {
 
-    iniciarContador(seconds) {
-        CountDown(seconds);
-    }
+  state = {
+    eventos: [],
+    statusEvento: false
+  }
 
+  
   render() {
     return (
-      <div>
-        <h3>Iniciar Todos los temporizadores</h3>
-        <CountDown seconds={20}/>
-        <button className='btn btn-success' onClick={() => this.iniciarContador(20)}>Start</button>
-        <hr/>
+      <div className="Contenedor">
+        <span className="Title">TEMPORIZADORES</span>
+        <span className="Mensaje">No tienes temporizadores <a href=".">Añade uno ahora</a></span>
       </div>
-    )
+    );
   }
 }
